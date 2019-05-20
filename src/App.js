@@ -77,7 +77,7 @@ class App extends Component {
     });
     this.setState({ searchResults });
   }
-  
+
   bookFabric = event => {
     event.preventDefault();
     const searchQuery = "Book fabric";
@@ -140,11 +140,29 @@ class App extends Component {
 
     this.setState({ searchResults });
   };
+  addToCart = id => {
+    const currentItem = [...this.state.searchResults].filter(v => v.id === id);
+    
+    this.setState({
+      ...this.state,
+      cart: [...currentItem, ...this.state.cart]
+    });
+  };
+
+  removeFromCart = productId => {
+    const updatedCartArray = [...this.state.cart].filter(v => v.id !== productId);
+    this.setState({
+      ...this.state,
+      cart: updatedCartArray
+    });
+  };
 
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header
+          cart={this.state.cart}
+          removeFromCart={this.removeFromCart} />
         <Menu
           bookLaminated={this.bookLaminated}
           bookFabric={this.bookFabric}
@@ -154,6 +172,8 @@ class App extends Component {
           handleSearch={this.handleSearch} />
         <ItemList
           products={this.state.searchResults}
+          cart={this.state.cart}
+          addToCart={this.addToCart}
         />
 
       </div>

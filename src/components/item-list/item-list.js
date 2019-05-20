@@ -5,7 +5,7 @@ import './item-list.css';
 class ItemList extends Component {
 
     getItemList = () => {
-        const { products } = this.props;
+        const { products, cart, addToCart } = this.props;
 
         if (products.length === 0)
             return <div className="text-center w-100">Перевiрте критерii пошуку</div>;
@@ -19,6 +19,8 @@ class ItemList extends Component {
                 id={product.id}
                 key={index}
                 price={product.price}
+                cart={cart}
+                addToCart={addToCart}
             />
         ));
 
