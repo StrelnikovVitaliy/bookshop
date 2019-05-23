@@ -15,6 +15,7 @@ class ItemList extends Component {
                 category={product.category}
                 title={product.title}
                 photo={product.photo}
+                format={product.format}
                 desc={product.desc}
                 id={product.id}
                 key={index}

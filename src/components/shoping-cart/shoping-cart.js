@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './shoping-cart.css';
 import Dropdown from 'react-bootstrap/Dropdown';
-import ShoppingCartIcon from '../../assets/shopping-cart.png'
+import ShoppingCartIcon from '../../assets/shopping-cart.png';
+import { Player } from 'video-react';
+
 
 
 class ShopingCart extends Component {
@@ -15,11 +17,8 @@ class ShopingCart extends Component {
                 <div>
                     <div>
                         <div>
-                            <img
-                                src={product.photo}
-                                alt={product.title}
-                                className="cart-product-image"
-                            />
+
+                            {(product.format==='.mp4')?(<Player playsInline src={product.photo + product.format} className="cart-product-image" />):(<img src={product.photo + product.format} className="cart-product-image" alt={product.title} />)}
                         </div>
                         <div>{product.title}</div>
                     </div>
