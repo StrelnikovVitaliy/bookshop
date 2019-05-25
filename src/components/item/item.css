@@ -30,10 +30,29 @@
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5) inset,
     0 2px 3px rgba(0, 0, 0, 0.5) inset, 0 1px 1px rgba(255, 255, 255, 0.1);
 }
+p.card-text.show{
+  height: auto;
+}
+p.card-text.hidden{
+  height: 45px;
+  overflow: hidden; 
+}
+
+button.toggle-button{
+  background: none;
+  border: none;
+  float: right;
+  outline: 0 !important;
+
+}
+.toggle-image{
+  height: 20px;
+  width: auto;
+}
 
 @media screen and (min-width: 400px) and (max-width: 768px) {
   .card {
-    max-width: 98%;
+    width: 98%;
     margin: 0 1%;
   }
 }
