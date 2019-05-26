@@ -11,7 +11,7 @@ class Menu extends Component {
             <div>
                 <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
                     <a className="navbar-brand" href="/"
-                    onClick={e=>{e.preventDefault()}}>Learn and Play</a>
+                    >Learn and Play</a>
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -24,9 +24,6 @@ class Menu extends Component {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarColor01">
                         <ul className="navbar-nav mr-auto">
-                            <li className="nav-item active">
-                                <a className="nav-link" href="/">Додому<span className="sr-only">(current)</span></a>
-                            </li> 
                             <li className="nav-item dropdown">
                                 <a
                                     className="nav-link dropdown-toggle"

@@ -1,11 +1,13 @@
 .header{
     display: flex;
-    justify-content: space-between;    
+    justify-content: flex-end;    
     align-items: center;
+    position: relative;
 
 }
 
 ul{
+    padding-left: 10px; 
     display: none;
     list-style-type: none;
     text-align: left;
@@ -13,21 +15,82 @@ ul{
 }
 .conactus{
     display: block;
+    position: relative;
+
+}
+.conactus-img{
+    display: flex;
     margin: 10px;
     border: 1px solid black;
     border-radius: 45%;
     padding: 10px;
     max-width: 60px;
 }
+.conactus-social a{
+    color: black;
+    margin: 5px;
+}
+.conactus-button{
+    background: transparent;
+    border: none;   
+}
+.conactus-button:active,
+.conactus-button:focus{
+    outline: none;
+}
+.conactus-social.show{
+    position: absolute;
+    z-index: 1;
+    bottom: -102px;
+    right: 10px;
+    display: flex;
+    padding: 3px 5px 3px 8px;
+    border: 1px solid black;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: white;
+    transition: linear 0.2s;
+}
+.conactus-social.hide{
+    display: none;
+
+}
+.conactus-social .fa-google:before{
+    margin-left: 52px;
+}
+.conactus-social .fa-instagram:before{
+    margin-left: 19px;
+}
 
 .logo{
+    left: 0;
+    top: 15px;
     display: block;
     max-width: 380px;
     width: 100%;
 
 }
+.social ul li a{
+    color: black;
+}
+
+.social ul li{
+    color: black;
+    margin-top: 15px; 
+    position: relative;
+    width: 100%;
+}
+.social ul li a i{
+    position: absolute;
+    font-size: 30px;
+    right: 0;
+    top: -5px;
+}
 
 @media screen and (min-width: 631px) { 
+    .logo{
+        position: absolute;
+    }
     ul{
         display: block;
     }

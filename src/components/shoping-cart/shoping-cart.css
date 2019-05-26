@@ -32,9 +32,10 @@
   padding: 15px 15px;
   max-height: 600px;
   overflow: auto;
+  width: 350px;
 }
 .dropdown-menu {
-  left: -160px !important;
+  left: -102px !important;
 }
 .navbar-nav > .nav-item > .dropdown-menu.show {
   left: 95px !important;
@@ -43,6 +44,10 @@
 @media screen and (min-width: 631px) {
   .dropdown-menu {
     left: -100px !important;
+  }
+  .dropdown-menu.show {
+
+    width: 550px;
   }
 }
 

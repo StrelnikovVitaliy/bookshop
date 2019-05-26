@@ -14,7 +14,6 @@ export default class Item extends Component {
     }
     toggleVisible() {
         this.setState( { visible: !this.state.visible } )
-        console.log('I was clicked');
     }
     render() {
         const { id, title, desc, price, photo, format, category, addToCart } = this.props;
