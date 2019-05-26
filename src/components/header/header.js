@@ -6,8 +6,15 @@ import conactus from "../../../src/assets/conactus.png";
 
 
 class Header extends Component {
+  state = {
+    visible: false
+  }
+  toggleVisible() {
+    this.setState({ visible: !this.state.visible })
+  }
   render() {
     const { cart, removeFromCart } = this.props;
+    const { visible } = this.state;
 
     return (
       <div className="header">
@@ -15,18 +22,27 @@ class Header extends Component {
           <img src={logo} className="logo" alt="logo" />
         </a>
         <div className="shoping-cart-container">
-          <ShopingCart cart={cart} removeFromCart={removeFromCart}/>
+          <ShopingCart cart={cart} removeFromCart={removeFromCart} />
         </div>
-        <a href="/home">
-          <img src={conactus} className="conactus" alt="conactus" />
-        </a>
-        <ul>
-          <li>Learn and Play</li>
-          <li>Контакты</li>
-          <li>тел +380638514392</li>
-          <li>email: strelnikovalinka@gmail.com</li>
-          <li>skype: bla-bla-bla</li>
-        </ul>
+
+        <div className="conactus">
+          <button className="conactus-button" onClick={this.toggleVisible.bind(this)}><img src={conactus} className="conactus-img" alt="conactus" /></button>
+          <div className={visible ? "conactus-social show" : "conactus-social hide"}>
+
+            <a title="Позвонить" href="tel:+380636771485">+380636771485</a>
+            <a href={"mailto: strelnikovalinka@gmail.com"}>Email: <i class="fab fa-google"></i></a>
+            <a href="https://www.instagram.com/learn._.play/" rel="noopener noreferrer" target="_blank">Instagram: <i class="fab fa-instagram"></i></a>
+
+          </div>
+        </div>
+
+        <div className="social">
+          <ul>
+            <li><a title="Позвонить" href="tel:+380636771485">+380636771485</a></li>
+            <li><a href={"mailto: strelnikovalinka@gmail.com"}>Email: <i class="fab fa-google"></i></a></li>
+            <li><a href="https://www.instagram.com/learn._.play/" rel="noopener noreferrer" target="_blank">Instagram: <i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
       </div>
     );
   }

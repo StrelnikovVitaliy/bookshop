@@ -1117,7 +1117,7 @@ class App extends Component {
         format: `.mp4`
       },
 
-            {
+      {
         id: Math.random(),
         title: "Page ID:213",
         category: "Page laminated",
@@ -1125,7 +1125,7 @@ class App extends Component {
         price: 40,
         photo: `./assets/116`,
         format: `.jpg`
-      },      {
+      }, {
         id: Math.random(),
         title: "Page ID:214",
         category: "Page laminated",
