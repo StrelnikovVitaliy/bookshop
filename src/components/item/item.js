@@ -6,6 +6,7 @@ import show from "../../assets/show.png";
 
 
 
+
 import './item.css';
 
 export default class Item extends Component {
@@ -13,13 +14,14 @@ export default class Item extends Component {
         visible: false
     }
     toggleVisible() {
-        this.setState( { visible: !this.state.visible } )
+        this.setState({ visible: !this.state.visible })
     }
     render() {
         const { id, title, desc, price, photo, format, category, addToCart } = this.props;
-        const {visible} = this.state;
+        const { visible } = this.state;
 
         return (
+
             <div className="card border-warning mb-3">
                 <div className="card-header">{category}</div>
                 <div className="card-body">
@@ -31,6 +33,7 @@ export default class Item extends Component {
                     <button className="add-button" onClick={() => addToCart(id)}>Add to cart!</button>
                 </div>
             </div>
+
         )
     }
 }
