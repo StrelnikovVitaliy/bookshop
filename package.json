@@ -9,7 +9,7 @@
     "react-dropdown": "^1.6.4",
     "react-image-gallery": "^0.8.16",
     "react-lazy-load": "^3.0.13",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "react-slick": "^0.24.0",
     "redux": "^4.0.1",
     "video-react": "^0.13.7"
